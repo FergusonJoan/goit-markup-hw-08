@@ -1,0 +1,25 @@
+.activities {
+    @extend %section;
+    &__heading {
+        @extend %heading;
+    }
+    &__list {
+        display: flex;
+        gap: 30px;
+    }
+    &__elem {
+        position: relative;
+        overflow: hidden;
+    }
+}
+.inner-active {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    min-width: 100%;
+    background-color: var(--inner-container-bg);
+    padding: 27px 0;
+    &__title {
+        @extend %primary-title;
+    }
+}
