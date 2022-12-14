@@ -1,7 +1,5 @@
 .clients {
     @extend %section;
-    &__container {
-    }
 
     &__heading {
         @extend %heading;
@@ -9,8 +7,21 @@
 
     &__list {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         gap: 30px;
+
+        @media screen and (min-width: $desctop) {
+            flex-wrap: nowrap;
+        }
+    }
+
+    &__item {
+        width: calc((100% - 30px) / 2);
+
+        @media screen and (min-width: $tablet) {
+            width: calc((100% - 60px) / 3);
+        }
     }
 
     &__link {

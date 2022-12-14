@@ -1,11 +1,24 @@
 // @extend %primary-title;
 .footer {
+    display: block;
     padding-top: 60px;
     padding-bottom: 60px;
     background-color: var(--footer-bg-color);
     &__container {
-        display: flex;
-        align-items: baseline;
+        @media screen and (min-width: $tablet) {
+            display: flex;
+            flex-wrap: wrap;
+            text-align: center;
+            justify-content: space-around;
+        }
+        @media screen and (min-width: $desctop) {
+            display: flex;
+            align-items: baseline;
+        }
+    }
+    &__info {
+        text-align: center;
+        padding-bottom: 60px;
     }
     &__logo {
         @extend %logo;
@@ -30,6 +43,12 @@
     }
     &__elem {
         margin-bottom: 9px;
+        @media screen and (min-width: $desctop) {
+            flex-wrap: nowrap;
+            align-items: baseline;
+            justify-content: none;
+            text-align: none;
+        }
     }
     &__addr {
         color: var(--footer-contacts-color);
@@ -46,7 +65,16 @@
 }
 
 .social {
-    margin-left: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    @media screen and (min-width: $desctop) {
+        margin-left: 70px;
+        text-align: left;
+        align-items: flex-start;
+    }
+
     &__title {
         @extend %primary-title;
     }
@@ -54,8 +82,10 @@
         @extend %list;
         display: flex;
         gap: 10px;
-    }
-    &__item {
+        margin-bottom: 60px;
+        @media screen and (min-width: $tablet) {
+            margin-bottom: 0;
+        }
     }
     &__link {
         @extend %social-icons;
@@ -75,17 +105,46 @@
 }
 
 .submit {
-    margin-left: auto;
+    @media screen and (min-width: $desctop) {
+        margin-left: auto;
+        text-align: left;
+        flex-direction: row;
+    }
+    align-items: center;
+    text-align: center;
+
     &__title {
         @extend %primary-title;
     }
+    &__form {
+        @media screen and (min-width: $tablet) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @media screen and (min-width: $desctop) {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+    }
     &__imput {
         padding-left: 22px;
-        margin-right: 12px;
-        min-width: 358px;
-        min-height: 50px;
+        min-width: 450px;
+        margin-bottom: 20px;
+
+        @media screen and (min-width: $desctop) {
+            margin-right: 12px;
+            min-width: 358px;
+            min-height: 50px;
+        }
+
         background-color: inherit;
         border-color: var(--border-gray);
+        @media screen and (max-width: $desctop) {
+            display: inline-flex;
+        }
     }
     &__button {
         @extend %main__button;

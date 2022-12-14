@@ -144,8 +144,8 @@
                 <div class="container team__container">
                     <h2 class="team__heading">Наша команда</h2>
                     <ul class="team__list">
-                        <li class="team__elem"><img src="./images/igor.jpg" alt="Ігор Дем'яненко фото" width="270"
-                                class="team__img">
+                        <li class="team__elem">
+                            <img src="./images/igor.jpg" alt="Ігор Дем'яненко фото" width="270" class="team__img">
                             <div class="inner-team">
                                 <h3 class="inner-team__title">Ігор Дем'яненко</h3>
                                 <p class="inner-team__subtitle"><span lang="en">Product Designer</span>
@@ -399,16 +399,16 @@
                 </article>
                 <div class="submit">
                     <p class="submit__title">Підпишіться на розсилку</p>
-                    <input type="email" class="submit__imput" name="email" id="email" placeholder="E-mail" required>
-                    <label for="email"></label>
-                    <button type="submit" class="submit__button">Підписатися
-                        <svg class="submit__icon" width="24" height="24">
-                            <use href="./images/symbol-defs.svg#icon-send"></use>
-                        </svg>
-                    </button>
+                    <form action="" class="submit__form">
+                        <input type="email" class="submit__imput" name="email" id="email" placeholder="E-mail" required>
+                        <button type="submit" class="submit__button">Підписатися
+                            <svg class="submit__icon" width="24" height="24">
+                                <use href="./images/symbol-defs.svg#icon-send"></use>
+                            </svg>
+                        </button>
+                    </form>
                 </div>
             </div>
-
         </footer>
         <!-- BACKDROP -->
         <div data-modal class="backdrop is-hidden">

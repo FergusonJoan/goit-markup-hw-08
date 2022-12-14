@@ -21,11 +21,16 @@
     font-weight: 500;
 }
 %section {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
     text-align: center;
+
     &:nth-child(2n) {
         background-color: var(--sec-bg-color);
+    }
+    @media screen and (min-width: $desctop) {
+        padding-top: 94px;
+        padding-bottom: 94px;
     }
 }
 %primary-title {

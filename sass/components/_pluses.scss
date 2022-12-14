@@ -1,9 +1,27 @@
 .pluses {
-    padding-top: 94px;
     &__list {
-        display: flex;
-        gap: 30px;
         @extend %list;
+        padding: 60px 0;
+        @media screen and (min-width: $tablet) {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 0;
+        }
+
+        @media screen and (min-width: $desctop) {
+            flex-wrap: nowrap;
+        }
+    }
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+
+        @media screen and (min-width: $tablet) {
+            margin-bottom: 0;
+            width: calc((100% - 30px) / 2);
+        }
     }
     &__thumb {
         display: flex;
@@ -20,6 +38,11 @@
         font-size: 14px;
         font-weight: 700;
         line-height: 1.15;
+
+        @media screen and (min-width: $tablet) {
+            text-align: start;
+        }
+        text-align: center;
     }
     &__subtitle {
         color: var(--sec-text-color);
