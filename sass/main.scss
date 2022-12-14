@@ -4,15 +4,15 @@
 @import "./base/placeholder";
 //Порядок важен! После vars если есть, идут placeholder, mixin
 @import "./base/common";
-// @import "./components/header";
+@import "./components/header";
 // @import "./components/hero";
 @import "./components/pluses";
-@import "./components/activities";
-@import "./components/team";
-@import "./components/clients";
+// @import "./components/activities";
+// @import "./components/team";
+// @import "./components/clients";
 // @import "./components/filter";
 // @import "./components/gallery";
-@import "./components/footer";
+// @import "./components/footer";
 // @import "./components/backdrop";
 // @import "./components/form";
 

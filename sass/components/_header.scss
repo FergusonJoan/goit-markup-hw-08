@@ -6,9 +6,12 @@
     }
 
     &__logo {
+        padding: 16px 0;
         @extend %logo;
         display: flex;
         color: var(--logo-top);
+        @media screen and (max-width: $tablet) {
+        }
     }
 
     &__logo--accent {
@@ -33,6 +36,9 @@
     }
     &__item {
         position: relative;
+    }
+    @media screen and (max-width: $tablet) {
+        display: none;
     }
 }
 .nav__link {
@@ -85,6 +91,9 @@
 
     &__icon {
         margin-right: 10px;
+    }
+    @media screen and (max-width: $tablet) {
+        display: none;
     }
 }
 .contacts__link {
