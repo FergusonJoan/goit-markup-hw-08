@@ -323,6 +323,26 @@ textarea {
   color: var(--accent-color);
 }
 
+.header__button {
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  display: inline-flex;
+  background-color: transparent;
+}
+
+.header__button .header__cross {
+  display: none;
+}
+
+.header__button.is-open .header__cross {
+  display: block;
+}
+
+.header__button.is-open .header__menu {
+  display: none;
+}
+
 .nav {
   display: flex;
   align-items: center;
