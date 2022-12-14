@@ -1,6 +1,5 @@
 .team {
     @extend %section;
-    display: flex;
     align-items: center;
     @media screen and (min-width: $tablet) {
         flex-wrap: wrap;

@@ -1,8 +1,10 @@
 .header {
     border-bottom: 1px solid var(--header-border-color);
     &__container {
+        position: relative;
         display: flex;
         align-items: center;
+        position: relative;
     }
     &__logo {
         padding: 16px 0;
@@ -18,12 +20,41 @@
         color: var(--accent-color);
     }
 }
+
 .header__button {
-    position: absolute;
-    top: 12px;
-    right: 10px;
+    margin-left: auto;
     display: inline-flex;
     background-color: transparent;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (min-width: $tablet) {
+        display: none;
+    }
+}
+
+.menu-container {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    left: 0;
+    padding: 20px;
+    background-color: yellowgreen;
+
+    text-align: center;
+}
+// .js-menu-container {
+// }
+.header-button {
+    &__close {
+    }
+
+    &__icon {
+        fill: #000000;
+        @media screen and (min-width: $tablet) {
+            display: none;
+        }
+    }
 }
 .header__button .header__cross {
     display: none;
@@ -34,6 +65,9 @@
 .header__button.is-open .header__menu {
     display: none;
 }
+// .js-close-menu {
+// }
+
 .nav {
     display: flex;
     align-items: center;
