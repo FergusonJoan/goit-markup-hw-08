@@ -8,6 +8,7 @@
 
     opacity: 1;
     transition: opacity var(--timiming-function);
+    overflow-y: scroll;
 }
 .backdrop.is-hidden {
     opacity: 0;

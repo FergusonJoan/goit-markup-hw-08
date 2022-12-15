@@ -5,7 +5,7 @@
 //Порядок важен! После vars если есть, идут placeholder, mixin
 @import "./base/common";
 @import "./components/header";
-// @import "./components/hero";
+@import "./components/hero";
 @import "./components/pluses";
 @import "./components/activities";
 @import "./components/team";
