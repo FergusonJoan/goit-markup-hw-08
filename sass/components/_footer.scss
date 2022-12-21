@@ -41,14 +41,16 @@
     &__list {
         @extend %list;
     }
-    &__elem {
-        margin-bottom: 9px;
+    &__elem {       
         @media screen and (min-width: $desctop) {
             flex-wrap: nowrap;
             align-items: baseline;
             justify-content: none;
             text-align: none;
         }
+    }
+    &__elem:not(:last-child) {
+        margin-bottom: 9px;
     }
     &__addr {
         color: var(--footer-contacts-color);
@@ -69,6 +71,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding-bottom: 60px;
     @media screen and (min-width: $desctop) {
         margin-left: 70px;
         text-align: left;
@@ -82,7 +85,6 @@
         @extend %list;
         display: flex;
         gap: 10px;
-        margin-bottom: 60px;
         @media screen and (min-width: $tablet) {
             margin-bottom: 0;
         }
@@ -129,15 +131,23 @@
             align-items: center;
         }
     }
-    &__imput {
-        padding-left: 22px;
-        min-width: 450px;
-        margin-bottom: 20px;
-
+    &__input {
+        @media screen and (max-width: $tablet) {
+            width: 100%;
+            max-width: 450px;
+            min-height: 50px;
+            margin-bottom: 20px;
+        }
+        @media screen and (min-width: $tablet) {
+            min-width: 450px;
+            min-height: 50px;
+            margin-bottom: 20px;
+        }
         @media screen and (min-width: $desctop) {
             margin-right: 12px;
             min-width: 358px;
             min-height: 50px;
+            margin-bottom: 0;
         }
 
         background-color: inherit;
@@ -158,7 +168,7 @@
         fill: var(--primary-white-color);
     }
 }
-.submit__imput {
+.submit__input {
     &:focus {
         color: var(--border-gray);
     }
