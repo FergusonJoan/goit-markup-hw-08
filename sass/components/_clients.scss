@@ -9,19 +9,16 @@
         display: flex;
         align-items: center;
         gap: 30px;
+        flex-wrap: wrap;
 
-        @media screen and (max-width: $desctop) {
-            flex-wrap: wrap;
-        }
         @media screen and (min-width: $desctop) {
             flex-wrap: nowrap;
         }
     }
 
     &__item {
-        @media screen and (max-width: $tablet) {
-            width: calc((100% - 30px) / 2);
-        }
+        width: calc((100% - 30px) / 2);
+
         @media screen and (min-width: $tablet) {
             width: calc((100% - 60px) / 3);
         }

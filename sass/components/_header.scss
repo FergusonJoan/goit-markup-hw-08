@@ -10,8 +10,6 @@
         @extend %logo;
         display: flex;
         color: var(--logo-top);
-        @media screen and (max-width: $tablet) {
-        }
     }
 
     &__logo--accent {
@@ -20,37 +18,16 @@
     }
 }
 
-.nav-cont {
-    background-color: var(--primary-white-color);
-    text-align: center;
-    padding-right: 15px;
-    @media screen and (max-width: $tablet) {
-        display: none;
-        position: absolute;
-        top: 100%;
-        width: 100%;
-        left: 0;
-        
-        // &.is-open {
-        // display: block;
-        // }
-    }
-
-    @media screen and (min-width: $tablet) {
-        display: flex;
-        flex-grow: 1;
-    }
-}
-
 .nav {
     display: flex;
     align-items: center;
     margin-left: 93px;
-    
+    @media screen and (max-width: $tablet) {
+            display: none;
+    } 
     &__list {
         display: flex;
-        @extend %list;
-        
+        @extend %list;          
     }
     &__link {
         display: inline-flex;
@@ -87,26 +64,30 @@
     }
 }
 
-.contacts {
-        margin-left: auto;
-    
+.contacts { 
+    margin-left: auto;
+    @media screen and (max-width: $tablet) {
+        display: none;
+    } 
     &__list {
         @extend %list;
         @media screen and (max-width: $desctop) {
             display: flex;
             flex-direction: column;
             align-items: baseline;
-            }
+        }
     } 
-    &__item {
-        margin-bottom: 10px;
+    &__item {       
         @media screen and (min-width: $desctop) {
         display: inline-flex;
-        margin-bottom: 0;
         }      
     }
+    &__item:not(:last-child) {
+        @media screen and (max-width: $desctop) {
+            margin-bottom: 10px;
+        }       
+    }
     
-
     &__link {
         display: inline-flex;
         color: var(--sec-text-color);
@@ -114,11 +95,19 @@
         align-items: center;
         fill: currentColor;
         transition: color var(--timiming-function); 
-
+        @media screen and (min-width: $tablet) {
+            &--email {
+                padding-top: 21px;
+            }
+            &--tel {
+                padding-bottom: 21px;
+            }
+            
+        }
         @media screen and (min-width: $desctop) {
             padding-top: 32px;
             padding-bottom: 32px;
-            }     
+        }     
     }
 
     &__icon {

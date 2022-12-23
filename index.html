@@ -20,15 +20,11 @@
             <div class="container header__container">
                 <a href="./index.html" class="logo header__logo"><span lang="en"><span
                             class="logo header__logo--accent">Web</span>Studio</span></a>
-
-                <button type="button" class="header__button is-open" data-menu-button aria-expanded="false">
+                <button type="button" class="header__button--open js-open-menu" data-menu-button aria-expanded="false">
                     <svg class="header__icon" width="40px" height="40px" aria-label="Переключатель мобильного меню">
-                        <!-- <use class="header__cross" href="./images/symbol-defs.svg#icon-cross"></use> -->
                         <use class="header__menu" href="./images/symbol-defs.svg#icon-menu"></use>
                     </svg>
-                </button>
-
-                <div class="nav-cont" id="nav-cont">
+                </button>  
                     <nav class="nav">
                         <ul class="nav__list">
                             <li class="nav__item">
@@ -42,27 +38,24 @@
                             </li>
                         </ul>
                     </nav>
-                    <div class="contacts">
-                        <ul class="contacts__list">
-                            <li class="contacts__item">
-                                <a href="mailto:info@devstudio.com" class="contacts__link" aria-label="envelope">
-                                    <svg class="contacts__icon" width="20" height="17.3">
-                                        <use href="./images/symbol-defs.svg#icon-envelope"></use>
-                                    </svg>info@devstudio.com</a>
-                            </li>
-                            <li class="contacts__item">
-                                <a href="tel:+380961111111" class="contacts__link" aria-label="smartphone">
-                                    <svg class="contacts__item" width="20" height="17.3">
-                                        <use href="./images/symbol-defs.svg#icon-smartphone"></use>
-                                    </svg>+38 096 111 11 11
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>                
+                <div class="contacts">
+                    <ul class="contacts__list">
+                        <li class="contacts__item">
+                            <a href="mailto:info@devstudio.com" class="contacts__link" aria-label="envelope">
+                                <svg class="contacts__icon" width="20" height="17.3">
+                                    <use href="./images/symbol-defs.svg#icon-envelope"></use>
+                                </svg>info@devstudio.com</a>
+                        </li>
+                        <li class="contacts__item">
+                            <a href="tel:+380961111111" class="contacts__link" aria-label="smartphone">
+                                <svg class="contacts__item" width="20" height="17.3">
+                                    <use href="./images/symbol-defs.svg#icon-smartphone"></use>
+                                </svg>+38 096 111 11 11</a>
+                        </li>
+                    </ul>
+                </div>               
             </div>
         </header>
-
         <main class="main">
             <!-- HERO -->
             <section class="overlay">
@@ -480,55 +473,48 @@
             </div>
         </div>
     <!-- MENU PHONE -->
-        <div class="menu" id="menu" data-menu>
-                <button type="button" class="header__button--open is-open" data-menu-button aria-expanded="false">
+        <div class="menu js-menu-container" id="menu">
+            <div class="menu-wrapper">
+                <button type="button" class="menu-toggle header__button--close js-close-menu" data-menu-button>
                     <svg class="header__icon" width="40px" height="40px" aria-label="Переключатель мобильного меню">
                         <use class="header__cross" href="./images/symbol-defs.svg#icon-cross"></use>
-                        <!-- <use class="header__menu" href="./images/symbol-defs.svg#icon-menu"></use> -->
                     </svg>
                 </button>
-            <div class="content">
-                <div class="menu-nav">
-                    <ul class="menu-nav__list">
-                        <li class="menu-nav__item">
-                            <a href="#studio" class="menu-nav__link">Студія</a>
-                        </li>
-                        <li class="menu-nav__item">
-                            <a href="./portfolio.html" class="menu-nav__link">Портфоліо</a>
-                        </li>
-                        <li class="menu-nav__item">
-                            <a href="#contacts" class="menu-nav__link">Контакти</a>
-                        </li>
-                    </ul>
-                </div> 
-                <div class="menu-cont">
-                    <ul class="menu-cont__list">
-                        <li class="menu-cont__item">
-                            <a href="tel:+380961111111" class="menu-cont__tel">
-                                +38 096 111 11 11
-                            </a>
-                        </li>
-                        <li class="menu-cont__item">
-                            <a href="mailto:info@devstudio.com" class="menu-cont__email">
-                                info@devstudio.com</a>
-                        </li>
-                    </ul>
-                </div>                 
-                <div class="menu-social">
-                    <ul class="menu-social__list">
-                        <li class="menu-social__item">Instagram</li>
-                        <li class="menu-social__item">Twitter</li>
-                        <li class="menu-social__item">Facebook</li>
-                        <li class="menu-social__item">Linkedin</li>
-                    </ul>
-                </div>    
+                <ul class="menu-nav">
+                    <li class="menu-nav__item">
+                        <a href="./index.html" class="menu-nav__link">Студія</a>
+                    </li>
+                    <li class="menu-nav__item">
+                        <a href="./portfolio.html" class="menu-nav__link">Портфоліо</a>
+                    </li>
+                    <li class="menu-nav__item">
+                        <a href="#contacts" class="menu-nav__link">Контакти</a>
+                    </li>
+                </ul>
+                <ul class="menu-cont">
+                    <li class="menu-cont__item">
+                        <a href="tel:+380961111111" class="menu-cont__tel">
+                            +38 096 111 11 11
+                        </a>
+                    </li>
+                    <li class="menu-cont__item">
+                        <a href="mailto:info@devstudio.com" class="menu-cont__email">
+                            info@devstudio.com</a>
+                    </li>
+                </ul>
+                <ul class="menu-social">
+                    <li class="menu-social__item"><a href="https://www.instagram.com/" class="menu-social__link">Instagram</a></li>
+                    <li class="menu-social__item"><a href="https://twitter.com/?lang=ru" class="menu-social__link">Twitter</a></li>
+                    <li class="menu-social__item"><a href="https://www.facebook.com/" class="menu-social__link">Facebook</a></li>
+                    <li class="menu-social__item"><a href="https://ua.linkedin.com/" class="menu-social__link">Linkedin</a></li>
+                </ul>   
             </div>
         </div>
+            </div>
+                
 
-    <!-- <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js" integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA==" crossorigin="anonymous"> -->
-       
-    </script>
-    <script src="./js/modal.js"></script>
+        <script src="./js/mobile-menu.js"></script>
+        <script src="./js/modal.js"></script>
 </body>
 
 </html>

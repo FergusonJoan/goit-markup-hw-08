@@ -25,11 +25,9 @@
         font-weight: 900;
         letter-spacing: 0.06em;
         text-transform: uppercase;
+        font-size: 26px;
+        line-height: calc(42 / 26);
 
-        @media screen and (max-width: $tablet) {
-            font-size: 26px;
-            line-height: calc(42 / 26);
-        }
         @media screen and (min-width: $tablet) {
             font-size: 26px;
             line-height: calc(42 / 26);
@@ -42,9 +40,8 @@
     &__button {
         @extend %main__button;
         padding: 10px 32px;
-        @media screen and (max-width: $phone) {
-            min-width: 200px;
-        }
+        min-width: 200px;
+
         @media screen and (min-width: $phone) {
             min-width: 200px;
         }

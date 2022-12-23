@@ -8,7 +8,6 @@
     opacity: 1;
     padding: 50px 30px;
     transition: opacity var(--timiming-function);
-
     overflow-y: scroll;
 } 
 .backdrop.is-hidden {
@@ -39,13 +38,6 @@
         position: absolute;
         top: 50%;
         left: 50%;   
-        min-width: 450px;
-        max-height: 609px;
-    }
-    @media screen and (min-width: $tablet) {
-        position: absolute;
-        top: 50%;
-        left: 50%;
         min-width: 450px;
         max-height: 609px;
     }
