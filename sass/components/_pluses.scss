@@ -6,11 +6,12 @@
             display: flex;
             flex-wrap: wrap;
             gap: 30px;
-            padding: 0;
         }
 
         @media screen and (min-width: $desctop) {
             flex-wrap: nowrap;
+            padding: 0;
+            padding-top: 94px;
         }
     }
     &__item {

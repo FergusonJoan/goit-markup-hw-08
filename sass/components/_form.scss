@@ -64,8 +64,14 @@
 .checkbox__text {
     display: block;
     margin-bottom: 4px;
+    @media screen and (max-width: $desctop) {
     font-size: 12px;
     line-height: сalc(14/12);
+    }
+    @media screen and (min-width: $desctop) {
+        font-size: 14px;
+        line-height: сalc(14/24);
+        }
     letter-spacing: 0.01em;
     color: var(--sec-text-color);
 }

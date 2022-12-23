@@ -1,13 +1,30 @@
 .gallery__container {
-    padding: 94px 0;
+    @media screen and (max-width: $desctop) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    @media screen and (min-width: $desctop) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
 }
 .filter {
     &__list {
         @extend %list;
-        margin-bottom: 50px;
         display: flex;
-        justify-content: center;
+        flex-wrap: wrap;
         gap: 8px;
+        @media screen and (max-width: $tablet) {
+            justify-content: start;
+            margin-bottom: 40px;
+        }
+        @media screen and (min-width: $tablet) {
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        @media screen and (min-width: $desctop) {
+            margin-bottom: 50px;
+        }
     }
     &__item {
         display: flex;

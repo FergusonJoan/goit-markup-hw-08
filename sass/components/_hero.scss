@@ -21,17 +21,35 @@
     &__title {
         margin-top: 0;
         margin-bottom: 30px;
-
         color: var(--primary-white-color);
         font-weight: 900;
-        font-size: 44px;
-        line-height: calc(60 / 44);
         letter-spacing: 0.06em;
         text-transform: uppercase;
+
+        @media screen and (max-width: $tablet) {
+            font-size: 26px;
+            line-height: calc(42 / 26);
+        }
+        @media screen and (min-width: $tablet) {
+            font-size: 26px;
+            line-height: calc(42 / 26);
+        }
+        @media screen and (min-width: $desctop) {
+            font-size: 44px;
+            line-height: calc(60 / 44);
+        }
     }
     &__button {
         @extend %main__button;
         padding: 10px 32px;
-        min-width: 216px;
+        @media screen and (max-width: $phone) {
+            min-width: 200px;
+        }
+        @media screen and (min-width: $phone) {
+            min-width: 200px;
+        }
+        @media screen and (min-width: $tablet) {
+            min-width: 216px;
+        }
     }
 }

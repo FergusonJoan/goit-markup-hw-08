@@ -1,14 +1,26 @@
 .gallery {
     &__list {
         @extend %list;
-        display: flex;
-        flex-wrap: wrap;
+        @media screen and (min-width: $tablet) {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
     }
 
     &__elem {
-        min-width: 370px;
-        margin-right: 30px;
-        margin-bottom: 30px;
+        @media screen and (max-width: $tablet) {
+            max-width: 450px;
+            margin-bottom: 30px;
+        }
+        @media screen and (min-width: $tablet) {
+            min-width: 354px;
+            width: calc((100% - 30px) / 2);
+        }
+        @media screen and (min-width: $desctop) {
+            min-width: 370px;
+            width: calc((100% - 60px) / 3);
+        }        
     }
 
     &__link {

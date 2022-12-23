@@ -69,9 +69,11 @@
 .social {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
     padding-bottom: 60px;
+    @media screen and (max-width: $desctop) {
+        align-items: center;
+        text-align: center;
+    }
     @media screen and (min-width: $desctop) {
         margin-left: 70px;
         text-align: left;
@@ -85,9 +87,6 @@
         @extend %list;
         display: flex;
         gap: 10px;
-        @media screen and (min-width: $tablet) {
-            margin-bottom: 0;
-        }
     }
     &__link {
         @extend %social-icons;
@@ -107,14 +106,15 @@
 }
 
 .submit {
+    @media screen and (max-width: $desctop) {
+        align-items: center;
+        text-align: center;
+    }    
     @media screen and (min-width: $desctop) {
-        margin-left: auto;
-        text-align: left;
-        flex-direction: row;
-    }
-    align-items: center;
-    text-align: center;
-
+            margin-left: auto;
+            text-align: left;
+            flex-direction: row;
+        }
     &__title {
         @extend %primary-title;
     }
@@ -124,7 +124,6 @@
             flex-direction: column;
             align-items: center;
         }
-
         @media screen and (min-width: $desctop) {
             display: flex;
             flex-direction: row;
@@ -132,6 +131,9 @@
         }
     }
     &__input {
+        background-color: inherit;
+        border-color: var(--border-gray);
+
         @media screen and (max-width: $tablet) {
             width: 100%;
             max-width: 450px;
@@ -149,9 +151,6 @@
             min-height: 50px;
             margin-bottom: 0;
         }
-
-        background-color: inherit;
-        border-color: var(--border-gray);
         @media screen and (max-width: $desctop) {
             display: inline-flex;
         }
