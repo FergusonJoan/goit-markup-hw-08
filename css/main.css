@@ -516,7 +516,7 @@ textarea {
 .hero {
   padding-bottom: 200px;
   padding-top: 200px;
-  max-width: 1600px;
+  min-width: 100%;
   margin-left: auto;
   margin-right: auto;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/cover.jpg");
@@ -637,8 +637,13 @@ textarea {
   left: 0;
   min-width: 100%;
   background-color: var(--inner-container-bg);
-  padding: 27px 0;
 }
+.inner-active__title {
+  margin-bottom: 0;
+  padding-top: 27px;
+  padding-bottom: 27px;
+}
+
 .team {
   align-items: center;
 }
@@ -1281,6 +1286,7 @@ textarea {
   flex-direction: column;
   position: relative;
   padding: 48px 40px;
+  height: 100%;
 }
 
 .header__button--open {
@@ -1303,6 +1309,7 @@ textarea {
 }
 
 .menu-nav {
+  margin-bottom: auto;
   text-align: left;
 }
 .menu-nav__item:not(:last-child) {
@@ -1342,8 +1349,10 @@ textarea {
 
 .menu-social {
   display: flex;
+  flex-wrap: wrap;
 }
 .menu-social__item {
+  margin-bottom: 20px;
   margin-right: 20px;
   font-weight: 500;
   font-size: 18px;
@@ -1360,8 +1369,8 @@ textarea {
   margin-left: 10px;
 }
 .menu-social__link {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .menu-nav__link:hover, .menu-nav__link:focus,

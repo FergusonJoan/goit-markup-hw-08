@@ -19,10 +19,14 @@
     position: absolute;
     bottom: 0;
     left: 0;
+    
     min-width: 100%;
     background-color: var(--inner-container-bg);
-    padding: 27px 0;
+
     &__title {
         @extend %primary-title;
+        margin-bottom: 0;
+        padding-top: 27px;
+        padding-bottom: 27px;
     }
 }

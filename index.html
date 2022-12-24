@@ -122,19 +122,31 @@
                     <h2 class="activities__heading">Чим ми займаємося</h2>
                     <ul class="activities__list">
                         <li class="activities__elem">
-                            <img src="./images/box1.jpg" alt="Процесс написання коду" width="370">
+                            <img class="activities__content" 
+                            srcset="./images/box1-1x-d-min.jpg 1x,
+                                    ./images/box1-2x-d-min.jpg 2x" 
+                            src="./images/box1-1x-d-min.jpg" 
+                            alt="Процесс написання коду" width="370">
                             <div class="inner-active">
                                 <p class="inner-active__title">Десктопні додатки</p>
                             </div>
                         </li>
                         <li class="activities__elem">
-                            <img src="./images/box2.jpg" alt="Розробка макету для мобільного застосунку" width="370">
+                            <img class="activities__content" 
+                            srcset="./images/box2-1x-d-min.jpg 1x,
+                                    ./images/box2-2x-d-min.jpg 2x" 
+                            src="./images/box2-1x-d-min.jpg"  
+                            alt="Розробка макету для мобільного застосунку" width="370">
                             <div class="inner-active">
                                 <p class="inner-active__title">Мобільні додатки</p>
                             </div>
                         </li>
                         <li class="activities__elem">
-                            <img src="./images/box3.jpg" alt="Градієнт кольорів на планшеті" width="370">
+                            <img class="activities__content" 
+                            srcset="./images/box3-1x-d-min.jpg 1x,
+                                        ./images/box3-2x-d-min.jpg 2x" 
+                            src="./images/box3-1x-d-min.jpg" 
+                            alt="Градієнт кольорів на планшеті" width="370">
                             <div class="inner-active">
                                 <p class="inner-active__title">Дизайнерські рішення</p>
                             </div>
@@ -148,7 +160,24 @@
                     <h2 class="team__heading">Наша команда</h2>
                     <ul class="team__list">
                         <li class="team__elem">
-                            <img src="./images/igor.jpg" alt="Ігор Дем'яненко фото" width="270" class="team__img">
+                            <picture>
+                                <source srcset="
+                                    ./images/igor-1x-d-min.jpg 1x,
+                                    ./images/igor-2x-d-min.jpg 2x"
+                                  media="(min-width:1200px)"
+                                />                         
+                                <source srcset="
+                                    ./images/igor-1x-t-min.jpg 1x,
+                                    ./images/igor-2x-t-min.jpg 2x"
+                                  media="(min-width:768px)"
+                                />
+                                <source srcset="
+                                    ./images/igor-1x-m-min.jpg 1x,
+                                    ./images/igor-2x-m-min.jpg 2x"
+                                  media="(max-width:767px)"
+                                />
+                                <img src="./images/igor-1x-m-min.jpg" alt="Ігор Дем'яненко фото" loading="lazy" class="team__img">                              
+                            </picture>                            
                             <div class="inner-team">
                                 <h3 class="inner-team__title">Ігор Дем'яненко</h3>
                                 <p class="inner-team__subtitle"><span lang="en">Product Designer</span>
@@ -185,8 +214,25 @@
                                 </ul>
                             </div>
                         </li>
-                        <li class="team__elem"><img src="./images/olya.jpg" alt="Ольга Рєпіна фото" width="270"
-                                class="team__img">
+                        <li class="team__elem">
+                            <picture>
+                                <source srcset="
+                                    ./images/ola-1x-d-min.jpg 1x,
+                                    ./images/ola-2x-d-min.jpg 2x"
+                                  media="(min-width:1200px)"
+                                />                         
+                                <source srcset="
+                                    ./images/ola-1x-t-min.jpg 1x,
+                                    ./images/ola-2x-t-min.jpg 2x"
+                                  media="(min-width:768px)"
+                                />
+                                <source srcset="
+                                    ./images/ola-1x-m-min.jpg 1x,
+                                    ./images/ola-2x-m-min.jpg 2x"
+                                  media="(max-width:767px)"
+                                />
+                                <img src="./images/ola-1x-m-min.jpg" alt="Ольга Рєпіна фото" loading="lazy" class="team__img">                              
+                            </picture>
                             <div class="inner-team">
                                 <h3 class="inner-team__title">Ольга Рєпіна</h3>
                                 <p class="inner-team__subtitle"><span lang="en">Frontend Developer</span></p>
@@ -222,8 +268,24 @@
                                 </ul>
                             </div>
                         </li>
-                        <li class="team__elem"><img src="./images/mykola.jpg" alt="Микола Тарасов фото" width="270"
-                                class="team__img">
+                        <li class="team__elem">
+                            <picture>
+                                <source srcset="
+                                    ./images/myc-1x-d-min.jpg 1x,
+                                    ./images/myc-2x-d-min.jpg 2x"
+                                  media="(min-width:1200px)"
+                                />                         
+                                <source srcset="
+                                    ./images/myc-1x-t-min.jpg 1x,
+                                    ./images/myc-2x-t-min.jpg 2x"
+                                  media="(min-width:768px)"
+                                />
+                                <source srcset="
+                                    ./images/myc-1x-m-min.jpg 1x,
+                                    ./images/myc-2x-m-min.jpg 2x"
+                                  media="(max-width:767px)"
+                                />
+                                <img src="./images/myc-1x-m-min.jpg" alt="Микола Тарасов фото" loading="lazy" class="team__img">
                             <div class="inner-team">
                                 <h3 class="inner-team__title">Микола Тарасов</h3>
                                 <p class="inner-team__subtitle"><span lang="en">Marketing</span></p>
@@ -259,8 +321,24 @@
                                 </ul>
                             </div>
                         </li>
-                        <li class="team__elem"><img src="./images/myhailo.jpg" alt="Михайло Єрмаков фото" width="270"
-                                class="team__img">
+                        <li class="team__elem">
+                            <picture>
+                                <source srcset="
+                                    ./images/mih-1x-d-min.jpg 1x,
+                                    ./images/mih-2x-d-min.jpg 2x"
+                                  media="(min-width:1200px)"
+                                />                         
+                                <source srcset="
+                                    ./images/mih-1x-t-min.jpg 1x,
+                                    ./images/mih-2x-t-min.jpg 2x"
+                                  media="(min-width:768px)"
+                                />
+                                <source srcset="
+                                    ./images/mih-1x-m-min.jpg 1x,
+                                    ./images/mih-2x-m-min.jpg 2x"
+                                  media="(max-width:767px)"
+                                />
+                                <img src="./images/mih-1x-m-min.jpg" alt="Михайло Єрмаков фото" loading="lazy" class="team__img">
                             <div class="inner-team">
                                 <h3 class="inner-team__title">Михайло Єрмаков</h3>
                                 <p class="inner-team__subtitle"><span lang="en">UI Designer</span></p>
@@ -402,7 +480,7 @@
                 </article>
                 <div class="submit">
                     <p class="submit__title">Підпишіться на розсилку</p>
-                    <form action="" class="submit__form">
+                    <form class="submit__form">
                         <input type="email" class="submit__input" name="email" id="email" placeholder="E-mail" required>
                         <button type="submit" class="submit__button">Підписатися
                             <svg class="submit__icon" width="24" height="24">
@@ -476,7 +554,7 @@
         <div class="menu js-menu-container" id="menu">
             <div class="menu-wrapper">
                 <button type="button" class="menu-toggle header__button--close js-close-menu" data-menu-button>
-                    <svg class="header__icon" width="40px" height="40px" aria-label="Переключатель мобильного меню">
+                    <svg class="header__icon--close" width="40px" height="40px" aria-label="Переключатель мобильного меню">
                         <use class="header__cross" href="./images/symbol-defs.svg#icon-cross"></use>
                     </svg>
                 </button>
