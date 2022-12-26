@@ -1257,7 +1257,7 @@ textarea {
 }
 .checkbox__vector {
   position: absolute;
-  top: 0;
+  top: -2px;
   left: 12px;
   display: block;
   width: 16px;
@@ -1265,6 +1265,11 @@ textarea {
   border: 2px solid #000;
   border-radius: 2px;
   transition: opacity var(--timiming-function);
+}
+@media screen and (min-width: 1199.98px) {
+  .checkbox__vector {
+    top: 0;
+  }
 }
 .checkbox__text {
   margin-bottom: 0;
