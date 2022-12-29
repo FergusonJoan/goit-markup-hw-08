@@ -1298,7 +1298,7 @@ textarea {
 }
 
 .menu {
-  display: none;
+  opacity: 0;
   position: fixed;
   top: 0;
   left: 0;
@@ -1308,9 +1308,13 @@ textarea {
   text-align: center;
   background-color: #fff;
   z-index: 100;
+  overflow-y: scroll;
+  transform: translateY(-100%);
+  transition: transform var(--timiming-function);
 }
 .menu.is-open {
-  display: block;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .menu-wrapper {
