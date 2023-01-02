@@ -11,12 +11,10 @@
 	z-index: 100;
 	overflow-y: scroll;
 
-	transform: translateY(-100%);
-  transition: transform var(--timiming-function);
+  transition: opacity var(--timiming-function);
 
 	&.is-open {
 	opacity: 1;
-	transform: translateY(0);
 	}	
 }
 .menu-wrapper {
